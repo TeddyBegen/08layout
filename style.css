@@ -1,0 +1,67 @@
+/* skapa ett grid */
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "hd hd"
+    "s a"
+    "f f";
+    grid-gap: 2%;
+   }
+/* mobil anpassa */   
+   @media screen and (max-width: 600px) {
+   
+    
+    body {
+      grid-template-columns: 1fr;
+      grid-gap: 1%;
+      grid-template-areas:
+      "hd"
+      "s"
+      "a"
+      "f";
+    }
+   }
+/* ändra färg på all text inom <p></p> taggar */   
+    p {
+      color: #42847D;
+    }
+/* ändra färg på <body> */
+    body {
+      background-color: #E9E9E9;
+    }
+   
+/* ändra färg på <header> och definera dess position och centrera */
+    header {
+      background-color: #B9D2B3;
+      grid-area: hd ;
+      text-align: center;
+
+    }
+/* definera position och ändra färg */   
+    section {
+      background-color: #B4B4B4;
+      grid-area: s ;
+    }
+   
+    aside {
+      background-color: #B8CEE6;
+      grid-area: a;
+      text-align: center;
+    }
+   
+    footer {
+      background-color: grey ;
+      grid-area: f ;
+      text-align: center;
+    }
+/* definera bredd och max storlek på bilden */
+    img#sea {
+      width: 60% ;
+      max-width: 1250px ;
+    }
+   
+    img#html {
+      width: 50% ;
+      max-width: 400px;
+}
